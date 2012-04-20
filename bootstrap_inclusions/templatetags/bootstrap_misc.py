@@ -22,3 +22,14 @@ def label(text, kind=''):
 	:param kind: Kind of label: success, warning, important, info, inverse, or leave blank for default.
 	"""
 	return { 'text': text, 'kind': kind, }
+
+
+@register.inclusion_tag('bootstrap_inclusions/misc/badge.html')
+def badge(num, kind=''):
+	"""
+	Generates a Bootstrap Badge.
+	
+	:param num: Number to appear in badge.
+	:param kind: Kind of badge: success, warning, error, info, inverse, or leave blank for default.
+	"""
+	return { 'num': num, 'kind': kind, }
