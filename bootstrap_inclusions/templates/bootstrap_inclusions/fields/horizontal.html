@@ -1,0 +1,22 @@
+<div class="control-group">
+	{% if widget_type == 'CHECKBOXINPUT' %}
+	<label class="checkbox">
+		{{ field }}
+		<span>{{ field.help_text }}</span>
+	</label>
+	{% elif widget_type == 'RADIOINPUT' %}
+	<label class="radio">
+		{{ field }}
+		<span>{{ field.help_text }}</span>
+	</label>
+	{% else %}
+	{{ field.label_tag }}
+	{{ field }}
+	
+	{% if field.help_text and inline %}
+	<span class="help-inline">{{ field.help_text }}</span>
+	{% elif field.help_text %}
+	<p class="help-block">{{ field.help_text }}</p>
+	{% endif %}
+	{% endif %}
+</div>
