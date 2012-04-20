@@ -58,3 +58,11 @@ def alert_block(header, text, kind='', close=True):
 	:param close: Pass in 0 to remove close button.
 	"""
 	return { 'header': header, 'text': text, 'kind': kind, 'close': close, }
+
+
+@register.inclusion_tag('bootstrap_inclusions/misc/close_icon.html')
+def close_icon():
+	"""
+	Generates a Bootstrap 'Close' Icon.
+	"""
+	return {}
