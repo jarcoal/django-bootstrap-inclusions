@@ -66,3 +66,16 @@ def close_icon():
 	Generates a Bootstrap 'Close' Icon.
 	"""
 	return {}
+
+
+@register.inclusion_tag('bootstrap_inclusions/misc/progress_bar.html')
+def progress_bar(percent, kind='', striped=False, active=False):
+	"""
+	Generates a Bootstrap Progress Bar.
+	
+	:param percent: Number 0-100 representing how much progress.
+	:param kind: Kind of progress: info, success, warning, danger or leave blank for default.
+	:param striped: Pass in something that resolves to True to enable striped effect.
+	:param active: Pass in something that resolves to True to enable stripe animation.
+	"""
+	return { 'percent': percent, 'kind': kind, 'striped': striped, 'active': active, }
