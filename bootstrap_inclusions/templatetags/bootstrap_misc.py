@@ -33,3 +33,28 @@ def badge(num, kind=''):
 	:param kind: Kind of badge: success, warning, error, info, inverse, or leave blank for default.
 	"""
 	return { 'num': num, 'kind': kind, }
+
+
+@register.inclusion_tag('bootstrap_inclusions/misc/alert.html')
+def alert(text, kind='', close=True):
+	"""
+	Generates a Bootstrap Alert.
+	
+	:param text: Text to appear in the alert.
+	:param kind: Kind of alert: success, error, info, or leave blank for default.
+	:param close: Pass in 0 to remove close button.
+	"""
+	return { 'text': text, 'kind': kind, 'close': close, }
+
+
+@register.inclusion_tag('bootstrap_inclusions/misc/alert_block.html')
+def alert_block(header, text, kind='', close=True):
+	"""
+	Generates a Bootstrap Alert.
+	
+	:param header: Text to appear in alert header.
+	:param text: Text to appear in the alert.
+	:param kind: Kind of alert: success, error, info, or leave blank for default.
+	:param close: Pass in 0 to remove close button.
+	"""
+	return { 'header': header, 'text': text, 'kind': kind, 'close': close, }

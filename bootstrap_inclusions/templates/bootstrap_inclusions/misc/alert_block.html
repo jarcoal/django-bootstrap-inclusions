@@ -1,0 +1,5 @@
+<div class="alert alert-block{% if kind %} alert-{{ kind }}{% endif %}">
+	{% if close %}<a class="close" data-dismiss="alert">&times;</a>{% endif %}
+	<h4 class="alert-heading">{{ header }}</h4>
+	{{ text }}
+</div>
