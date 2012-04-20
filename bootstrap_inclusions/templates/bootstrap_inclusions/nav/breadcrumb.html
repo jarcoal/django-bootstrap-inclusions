@@ -1,0 +1,12 @@
+<ul class="breadcrumb">
+	{% for u in units %}
+	{% if forloop.last %}
+	<li class="active">{{ u.0 }}</li>
+	{% else %}
+	<li>
+		<a href="{{ u.1 }}">{{ u.0 }}</a>
+		<span class="divider">/</span>
+	</li>
+	{% endif %}
+	{% endfor %}
+</ul>
