@@ -10,7 +10,7 @@ setup(
     author_email="jarcoal@gmail.com",
     url="https://github.com/jarcoal/django-bootstrap-inclusions",
     license="BSD",
-    packages=["bootstrap-inclusions"],
+    packages=["bootstrap_inclusions"],
     zip_safe=False,
     install_requires=[],
     include_package_data=True,
